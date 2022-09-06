@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>REST API Practice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body onload="getData()">
+        <ul>
+            <div id="dataList"></div>
+        </ul>
+        <script>
+            function getData() {
+                const list = document.getElementById('dataList');
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+                xhr.onload = function(e) {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            var users = JSON.parse(xhr.responseText);
+                            for (let i = 0; i < users.length; i++) {
+                                list.innerHTML += `<li>
+                                                    ${users[i].id} ${users[i].name} ${users[i].email}
+                                                    </li>`;
+                                        }
+                                    } else {
+                                console.error(xhr.statusText);
+                            }
+                        }
+                    };
+                    xhr.onerror = function(e) {
+                        console.error(xhr.statusText);
+                    };
+                    xhr.send(null);
+                }
+        </script>
+    </body>
+</html>
