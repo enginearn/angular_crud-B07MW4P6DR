@@ -7,46 +7,47 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <h3>Create Data</h3>
         <div>
-            <input id="siteName" placeholder="Site Name" type="text">
+            <h3>Create Data</h3>
+            <div>
+                <input id="siteName" placeholder="Site Name" type="text">
+            </div>
+            <div>
+                <input id="siteURL" placeholder="Site URL" type="text">
+            </div>
+            <button onclick="createData()">Create</button>
+
+            <hr>
+
+            <h3>Read Data</h3>
+            <button onclick="readData()">Read</button>
+            <ul>
+                <div id="dataList"></div>
+            </ul>
+
+            <hr>
+
+            <h3>Update Data</h3>
+            <div>
+                <input id="updateId" placeholder="ID" type="text">
+            </div>
+            <div>
+                <input id="updateSiteName" placeholder="Site Name" type="text">
+            </div>
+            <div>
+                <input id="updateSiteURL" placeholder="Site URL" type="text">
+            </div>
+            <button onclick="updateData()">Update</button>
+
+            <hr>
+
+            <h3>Delete Data</h3>
+            <div>
+                <input id="deleteId" placeholder="ID" type="text">
+            </div>
+            <button onclick="deleteData()">Delete</button>
+
+            <script src="crudAppJS.js"></script>
         </div>
-        <div>
-            <input id="siteURL" placeholder="Site URL" type="text">
-        </div>
-        <button onclick="createData()">Create</button>
-
-        <hr>
-
-        <h3>Read Data</h3>
-        <button onclick="readData()">Read</button>
-        <ul>
-            <div id="dataList"></div>
-        </ul>
-
-        <hr>
-
-        <h3>Update Data</h3>
-        <div>
-            <input id="updateId" placeholder="ID" type="text">
-        </div>
-        <div>
-            <input id="updateSiteName" placeholder="Site Name" type="text">
-        </div>
-        <div>
-            <input id="updateSiteURL" placeholder="Site URL" type="text">
-        </div>
-        <button onclick="updateData()">Update</button>
-
-        <hr>
-
-        <h3>Delete Data</h3>
-        <div>
-            <input id="deleteId" placeholder="ID" type="text">
-        </div>
-        <button onclick="deleteData()">Delete</button>
-
-        <script src="crudAppJS.js"></script>
-
     </body>
 </html>
