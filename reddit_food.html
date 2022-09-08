@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>Reddit Food</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body onload="getData()">
+        <script>
+            function getData() {
+                fetch("https://www.reddit.com/r/food/top.json?limit=10")
+                .then((res) => res.json())
+                .then((res) => res.data.children)
+                .then((articles) => {
+                    for (let i = 0; i < articles.length; i++) {
+                        console.log(articles[i].data.title);
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+            }
+        </script>
+
+    </body>
+</html>

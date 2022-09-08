@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>Fetch API Practice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body onload="getData()">
+        <script>
+            function getData() {
+                fetch("https://jsonplaceholder.typicode.com/users")
+                .then((res) => res.json())
+                .then((users) => {
+                    for (let user = 0; user < users.length; user++) {
+                        console.log(users[user].name);
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+            }
+        </script>
+
+    </body>
+</html>
