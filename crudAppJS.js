@@ -23,7 +23,7 @@ function readData() {
     list.innerHTML = "";
     for (let i = 0; i < sites.length; i++) {
         list.innerHTML += `<li>
-                            ${i} ${sites[i].name} ${sites[i].url}
+                            ${sites[i].id} ${sites[i].name} ${sites[i].url}
                             </li>`;
     }
 }

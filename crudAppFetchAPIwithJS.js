@@ -31,13 +31,15 @@ function readData() {
     list.innerHTML = "";
     fetch("http://localhost:3000/sites")
     .then((res) => {
-        res.json;
+        res.json();
     })
     .then((sites) => {
     for (let i = 0; i < sites.length; i++) {
-        list.innerHTML += `<li>
-                            ${i} ${sites[i].name} ${sites[i].url}
-                            </li>`;
+        if (sites[i].length && sites[i].length) {
+            list.innerHTML += `<li>
+            ${sites[i].id} ${sites[i].name} ${sites[i].url}
+            </li>`;
+        }
     }
 })
 .catch((err) => {

@@ -1,10 +1,14 @@
-
 {
-    "sites": [
-        {
-            "id": 1,
-            "name": "Site 1",
-            "url": "http://site1.com"
-        }
-    ]
+  "sites": [
+    {
+      "name": "github",
+      "url": "https://github.com/",
+      "id": 1
+    },
+    {
+      "name": "Python",
+      "url": "https://www.python.org/",
+      "id": 2
+    }
+  ]
 }
