@@ -9,6 +9,16 @@
       "name": "Python",
       "url": "https://www.python.org/",
       "id": 2
+    },
+    {
+      "name": "Amazon",
+      "url": "https://www.amazon.co.jp/",
+      "id": 3
+    },
+    {
+      "name": "Rust",
+      "url": "https://www.rust-lang.org/ja",
+      "id": 4
     }
   ]
 }
