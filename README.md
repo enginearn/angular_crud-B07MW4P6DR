@@ -33,6 +33,113 @@ json-server --watch .\crudAppFetchAPIwithJSDB.json
 
 ## Angular
 
+## Loopback-cli
+
+<details>
+<summary>Install loopback-cli 4</summary>
+
+``` PowerShell
+npm i -g @loopback/cli
+```
+
+</details>
+
+<details>
+<summary>Create project</summary>
+
+``` PowerShell
+lb4 app
+? プロジェクト名: loopback4_app
+? プロジェクトの説明: loopback
+? プロジェクト・ルート・ディレクトリー: loopback4_app
+? アプリケーション・クラス名: Loopback4AppApplication
+? プロジェクトで有効にする機能を選択してください Enable eslint, Enable prettier, Enable mocha, Enable loopbackBuild, Enable vscode, Enable docker, Enable repositories, Enable services
+    force loopback4_app\.yo-rc.json
+   create loopback4_app\.eslintignore
+   create loopback4_app\.eslintrc.js
+   create loopback4_app\.mocharc.json
+   create loopback4_app\.prettierignore
+   create loopback4_app\.prettierrc
+   create loopback4_app\DEVELOPING.md
+   create loopback4_app\package.json
+   create loopback4_app\tsconfig.json
+   create loopback4_app\.vscode\launch.json
+   create loopback4_app\.vscode\settings.json
+   create loopback4_app\.vscode\tasks.json
+   create loopback4_app\.gitignore
+   create loopback4_app\.dockerignore
+   create loopback4_app\Dockerfile
+   create loopback4_app\README.md
+   create loopback4_app\public\index.html
+   create loopback4_app\src\application.ts
+   create loopback4_app\src\index.ts
+   create loopback4_app\src\migrate.ts
+   create loopback4_app\src\openapi-spec.ts
+   create loopback4_app\src\sequence.ts
+   create loopback4_app\src\controllers\index.ts
+   create loopback4_app\src\controllers\ping.controller.ts
+   create loopback4_app\src\controllers\README.md
+   create loopback4_app\src\datasources\README.md
+   create loopback4_app\src\models\README.md
+   create loopback4_app\src\repositories\README.md
+   create loopback4_app\src\__tests__\README.md
+   create loopback4_app\src\__tests__\acceptance\home-page.acceptance.ts
+   create loopback4_app\src\__tests__\acceptance\ping.controller.acceptance.ts
+   create loopback4_app\src\__tests__\acceptance\test-helper.ts
+
+No change to package.json was detected. No package manager install will be executed.
+npm WARN config cache-min This option has been deprecated in favor of `--prefer-offline`.
+npm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+
+added 568 packages, and audited 569 packages in 43s
+
+78 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+アプリケーション loopback4_app は loopback4_app に作成されました。
+
+次のステップ:
+
+$ cd loopback4_app
+$ npm start
+```
+
+</details>
+
+<details>
+<summary>npm start</summary>
+
+``` PowerShell
+npm start
+
+> loopback4_app@0.0.1 prestart
+> npm run rebuild
+
+
+> loopback4_app@0.0.1 rebuild
+> npm run clean && npm run build
+
+
+> loopback4_app@0.0.1 clean
+> lb-clean dist *.tsbuildinfo .eslintcache
+
+
+> loopback4_app@0.0.1 build
+> lb-tsc
+
+
+> loopback4_app@0.0.1 start
+> node -r source-map-support/register .
+
+Server is running at http://[::1]:3000
+Try http://[::1]:3000/ping
+```
+
+</details>
+
+
 ## References
 
 <details>
@@ -65,5 +172,14 @@ json-server --watch .\crudAppFetchAPIwithJSDB.json
 [AngularApp](http://localhost:4200/)
 
 [知らないと危険！HTMLのtarget="_blank"でリンクを安全に新しいタブで開く方法 - WEBCAMP MEDIA](https://web-camp.io/magazine/archives/82442)
+
+[TypeScriptに移行して気づいた10の事実](https://i-beam.org/2019/05/30/fact-about-typescript/)
+
+[Installation | LoopBack Documentation](https://loopback.io/doc/en/lb3/Installation.html)
+
+[Getting started | LoopBack Documentation](https://loopback.io/doc/en/lb4/Getting-started.html)
+
+[NestJS vs. LoopBack 4: Which is best? - LogRocket Blog](https://blog.logrocket.com/nestjs-vs-loopback-which-is-best/)
+
 
 </details>
